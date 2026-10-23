@@ -1,0 +1,416 @@
+/* ==========================================================
+   PORTFOLIO.CSS
+   Organizado pela ordem das secções do HTML:
+   1. Estilos globais
+   2. nav (.nav_bar)
+   3. section id="inicio"
+   4. section id="sobre_mim"
+   5. section id="h_i" (habilidades e interesses)
+   6. section id="Portfolio de Projectos"
+   7. section id="Contactos"
+   ========================================================== */
+
+
+/* ==========================================================
+   1. ESTILOS GLOBAIS
+   ========================================================== */
+body{
+    color: white;
+    background-color: #020b1c;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+div{
+    margin: 0;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 30px;
+}
+h4{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+}
+ul li img{
+    width: 100px;
+}
+
+
+/* ==========================================================
+   2. NAV  (div class="nav_bar")
+   ========================================================== */
+.nav_bar{
+    background-color: #0b1f3a;
+    display: flex;
+}
+nav a{
+    margin: 20px;
+    position: relative;
+    font-size: 20px;
+    left: 600px;
+    color: rgb(170, 207, 237);
+    text-decoration: none;
+}
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+nav a:hover::after{
+    width: 100%;
+}
+nav a:hover{
+    color: aqua;
+}
+
+
+/* ==========================================================
+   3. SECTION id="inicio"
+   ========================================================== */
+#inicio{
+    margin-left: 50px;
+}
+#inicio h6{
+    font-size: 20px;
+    color: #00A8ff;
+    margin-bottom: 0;
+}
+.nome{
+    color: #00E5ff;
+    margin-top: 0;
+}
+#inicio h2 img{
+    transition: transform 0.5s ease-in-out;
+}
+#inicio h2 img:hover{
+    transform: translatey(-10px) ;
+    transform: scale(1.5);
+}
+.sou{
+    display: flex;
+}
+.p{
+    flex: 45%;
+}
+.world img{
+    position: relative;
+    flex: 55%;
+    width: 300px;
+    border-radius: 1000px;
+    margin-right: 50px;
+    transform: translateY(-150px)
+}
+/* (classe sem uso no HTML atual: o id é "inicio", não a classe) */
+.inicio li{
+    margin-right: 100px;
+    text-align: right
+}
+
+
+/* ==========================================================
+   4. SECTION id="sobre_mim"
+   ========================================================== */
+#sobre_mim{
+    margin: 50px;
+}
+.sm{
+    padding: 0;
+    font-size: 50px;
+    display: flex;
+}
+.s{
+    margin-right: 10px;
+    color: #008cff;
+}
+.minha_foto{
+    position: relative;
+    height: 600px;
+    display: flex;
+}
+#Mim{
+    flex: 50%;
+    padding: 0px;
+}
+.m4, .dp{
+    text-align: left;
+    justify-content: left;
+    font-size: 20px;
+    background-color: rgb(9, 80, 138);
+    padding: 0;
+}
+.eusou{
+    border: 3px solid #008cff;
+    border-radius: 25px;
+    padding: 10px;
+}
+.pn{
+    border: 3px solid #008cff;
+    border-radius: 25px;
+    padding: 10px;
+}
+.minha_foto img{
+    position: relative;
+    width: 350px;
+    margin-right: 100px;
+    margin-left: 250px;
+    flex: 50%;
+    border-radius: 25px;
+    border: 6px solid #008cff;
+}
+.minha_foto img:hover{
+    box-shadow: 10px 0 30px #008cff, -10px 0 30px #008cff;
+    transform: scale(1.1);
+    transition: all.7s ease-in-out;
+}
+
+
+/* ==========================================================
+   5. SECTION id="h_i"  (Minhas habilidades / Meus interesses)
+   ========================================================== */
+
+/* ---- Habilidades (linha 1) ---- */
+.habilidades{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #020b1c;
+}
+.habilidades li{
+    width: 250px;
+    height: 100px;
+    background-color: #091242;
+    border-radius: 20px;
+    list-style-type: none;
+    display: flex;
+    border: 6px solid aqua;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    animation: hability 2s ease-in-out infinite alternate;
+}
+.habilidades li:hover{
+    transform: translateY(-20px);
+    transform: scale(1.2);
+    background-color: #000000;
+}
+
+/* ---- Habilidades (linha 2) ---- */
+.habilidades2{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #020b1c;
+}
+.habilidades2 li{
+    width: 250px;
+    height: 100px;
+    background-color: #091242;
+    border-radius: 20px;
+    border: 6px solid aqua;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in;
+    animation: hability 2s ease-in-out infinite alternate
+}
+.habilidades2 li:hover{
+    transform: translateX(-10px);
+    transform: scale(1.2);
+    background-color: #000000;
+}
+
+/* ---- Interesses (linha 1) ---- */
+.interesse{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    animation: Intess 5s infinite ease-in-out alternate
+}
+.interesse li{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #091242;
+    list-style-type: none;
+    border-radius: 20px;
+    border: 6px solid aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.interesse li:hover{
+    transform: translateY(-20px);
+    transform: scale(1.1);
+    background-color: #000000;
+}
+
+/* ---- Interesses (linha 2) ---- */
+.interesse2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #020b1c;
+    left: 100px;
+    animation: Intess 5s infinite ease-in-out alternate
+}
+.interesse2 li{
+    width: 300px;
+    height: 200px;
+    background-color: #091242;
+    border-radius: 20px;
+    border: 6px solid aqua;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.interesse2 li:hover{
+    transform: translateY(-20px);
+    transform: scale(1.1);
+    background-color: #000000;
+}
+
+/* ---- Animações desta secção ---- */
+@keyframes hability{
+    50% { transform: translateY(-50px);
+}  }
+@keyframes Intess{
+    50% { transform: translate(-100px); transform: scale(0deg);
+}  100%{
+    transform: translate(100px); transform: scale(360deg);
+}}
+
+
+/* ==========================================================
+   6. SECTION id="Portfolio de Projectos"
+   ========================================================== */
+.pp{
+    font-size: 50px;
+    text-align: center;
+}
+.clique1{
+    font-size: 20px;
+}
+.projectos{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    list-style-type: none;
+    left: 200px;
+}
+button:hover{
+    z-index: 0;
+    box-shadow: 10px 0 10px #008cff, -10px 0 10px #e100ff;
+    transform: scale(1.2);
+}
+.projectos button{
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background-color: #000000;
+    list-style-type: none;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    justify-content: center;
+    border: none;
+    transition: transform 1s ease-in-out;
+}
+button::after{
+    content: "";
+    position: absolute;
+    width: 155px;
+    height: 79px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff );
+    z-index: -1;
+}
+.projectos button a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ==========================================================
+   7. SECTION id="Contactos"
+   ========================================================== */
+#Contactos h2{
+    display: flex;
+    position: relative;
+    left: 500px;
+    font-size: 50px;
+    text-align: center;
+}
+.cont img{
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+}
+.clique2{
+    font-size: 20px;
+    text-align: center;
+}
+.Contactos{
+    display: flex;
+    margin: 100px;
+}
+.Gmail img{
+    width: 100px;
+    border-radius: 25%;
+    margin: 50px;
+    animation: mail 1s ease-in-out infinite alternate ;
+}
+.WhatsApp img{
+    width: 100px;
+    border-radius: 50%;
+    margin: 50px;
+    animation: mail 1s ease-in-out infinite alternate ;
+}
+.Telefone img{
+    width: 100px;
+    border-radius: 25%;
+    margin: 50px;
+    animation: mail 1s ease-in-out infinite alternate ;
+}
+.Instagram img{
+    width: 100px;
+    border-radius: 30%;
+    margin: 50px;
+    animation: mail 1s ease-in-out infinite alternate ;
+}
+.Mail img{
+    width: 130px;
+    border-radius: 25%;
+    margin: 50px;
+    animation: mail 1s ease-in-out infinite alternate ;
+}
+@keyframes mail {
+    0%{ transform: translateY(0px); transform: scale(1);
+}
+    100%{
+    transform: translateY(-50px) scale(1.1);
+}}
